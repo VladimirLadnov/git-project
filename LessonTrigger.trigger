@@ -9,6 +9,7 @@ trigger LessonTrigger on Lesson__c (before insert, before update, before delete,
 
 		if(Trigger.isUpdate){}
 
+		//some diff
 		//Not to delete lessons
 		if(Trigger.isDelete){
 			if(CheckRecursive.run()){
