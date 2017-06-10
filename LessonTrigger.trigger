@@ -9,6 +9,7 @@ trigger LessonTrigger on Lesson__c (before insert, before update, before delete,
 
 		if(Trigger.isUpdate){}
 
+		//Not to delete lessons
 		if(Trigger.isDelete){
 			if(CheckRecursive.run()){
 				LessonHandler.BeforeDelete(Trigger.Old);
