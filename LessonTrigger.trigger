@@ -1,6 +1,7 @@
 trigger LessonTrigger on Lesson__c (before insert, before update, before delete, after insert,
 									after update, after delete, after undelete)  { 
 
+	//Before's triggers								
 	if(Trigger.isBefore){
 		
 		if(Trigger.isInsert){
@@ -18,6 +19,7 @@ trigger LessonTrigger on Lesson__c (before insert, before update, before delete,
 		}
 	}
 
+	//After's triggers
 	if(Trigger.isAfter){
 		
 		if(Trigger.isInsert){

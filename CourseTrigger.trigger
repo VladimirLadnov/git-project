@@ -20,6 +20,7 @@ trigger CourseTrigger on Course__c (before insert, before update, before delete,
 		}
 	}
 
+	//After's triggers
 	if(Trigger.isAfter){
 		
 		if(Trigger.isInsert){
