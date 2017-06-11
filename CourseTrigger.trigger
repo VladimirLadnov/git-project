@@ -12,6 +12,7 @@ trigger CourseTrigger on Course__c (before insert, before update, before delete,
 			CourseHandler.BeforeUpdate(Trigger.old);
 		}
 
+		//Not to delete course
 		if(Trigger.isDelete){
 			CourseHandler.BeforeDelete(Trigger.Old);
 		}
