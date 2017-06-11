@@ -8,10 +8,12 @@ trigger CourseTrigger on Course__c (before insert, before update, before delete,
 			CourseHandler.BeforeInsert(Trigger.New);
 		}
 
+		//Create lessons
 		if(Trigger.isUpdate){
 			CourseHandler.BeforeUpdate(Trigger.old);
 		}
 
+		//Not to delete
 		if(Trigger.isDelete){
 			CourseHandler.BeforeDelete(Trigger.Old);
 		}
